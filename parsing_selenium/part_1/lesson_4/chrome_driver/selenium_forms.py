@@ -6,8 +6,7 @@ from selenium.webdriver.common.keys import Keys
 import random
 
 service = Service(
-    executable_path="/home/laziz/PycharmProjects/practice-with-the-api/parsing_selenium"
-                    "/part_1/lesson_2/chrome_driver/chromedriver"
+    executable_path="/parsing_selenium/part_2/lesson_1/chrome_driver/chromedriver"
 )
 
 options = webdriver.ChromeOptions()
@@ -24,12 +23,13 @@ driver.get(url)
 
 try:
     driver.get(url=url)
-    time.sleep(5)
+    time.sleep(3)
     email_element = driver.find_element(By.ID, 'index_email')
     email_element.clear()
     email_element.send_keys('998906086066')
     time.sleep(3)
-    login_button = driver.find_element(By.CLASS_NAME, 'FlatButton__content').click()
+    email_element.send_keys(Keys.ENTER)
+
     time.sleep(3)
 
 except Exception as ex:
