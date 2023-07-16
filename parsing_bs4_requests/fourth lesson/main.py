@@ -71,8 +71,7 @@ def get_data_selenium(url):
                                                          "23.5.1.575 (beta) Yowser/2.5 Safari/537.36")
 
     try:
-        driver = webdriver.Firefox(executable_path="/home/laziz/PycharmProjects/practice-with-the-api/"
-                                                   "parsing/fourth lesson/geckodriver",
+        driver = webdriver.Firefox(executable_path="/parsing_bs4_requests/fourth lesson/geckodriver",
                                    options=options)
         driver.get(url=url)
         time.sleep(5)
